@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=M+PLUS+1:wght@300&display=swap');
+
+
 :root
 {
     --font-size-normal:              15px;
@@ -17,10 +21,10 @@
 
 .theme-light,
 .theme-dark {
-  --background-primary: #0e0e0e; /*Cabe aclarar que al moemento de ver este codigo aun no he creado , una clara vista de
+  --background-primary: #262631; /*Cabe aclarar que al moemento de ver este codigo aun no he creado , una clara vista de
   colores , no obtante con poner este codigo en los spnitpests de obsidian se veran las modificaciones que hice.*/
-  --background-primary-alt: #606566;
-  --background-secondary:#474747;
+  --background-primary-alt: #3b3b3bb0;
+  --background-secondary: #393a55 ;
   --background-secondary-alt: #383838;
   --background-accent: rgb(223, 204, 204);
   --background-modifier-border: #f8f8f8;
@@ -51,20 +55,21 @@
   --scrollbar-bg: rgba(0, 0, 0, 0.05);
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.2);
 
-  --text-title-h1:              #d65d0e;
-  --text-title-h2:              #d79921;
-  --text-title-h3:              #98971a;
-  --text-title-h4:              #689d6a;
-  --text-title-h5:              #458588;
-  --text-title-h6:              #f8f6f7;
-  --inline-code:                #b48ead;
-  --code-block:                 #b48ead;
-  --pre-code-bg:                rgba(0, 0, 0, 0.2);
+  --text-title-h1:              #7888f3;
+  --text-title-h2:              #7888f3;
+  --text-title-h3:              #7888f3; 
+  --text-title-h4:              #7888f3; 
+  --text-title-h5:              #7888f3; 
+  --text-title-h6:              #7888f3; 
+ 
+  --pre-code-bg:                rgba(3, 3, 3, 0.2);
   --blockquote-border:          #b57614;
   --vim-cursor:                 #d65d0e;
   --border-color:               #504945; /*also like transparent*/
   --hover-bg:                   rgba(0, 0, 0, 0.5); 
 }
+
+
 /* better use rgba color for all color var ended with `bg`*/
 
 
@@ -110,6 +115,23 @@
   background-color: var(--border-color);
 }
 
+
+.side-dock-ribbon-tab, .side-dock-ribbon-action {
+  text-align: center;
+  color: #00A98A;
+  cursor: pointer;
+  stroke-width: 2px;
+}
+
+.nav-folder-collapse-indicator {
+  margin-left: -14px;
+  width: 14px;
+  color: #00A98A;
+}
+
+.workspace-leaf.mod-active .view-header-title, .workspace-leaf.mod-active .view-header-icon {
+    color: #00A98A;
+}
 /*horizontal resize-handle*/
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle{
   height: 1px !important;
@@ -244,8 +266,6 @@ a:not(.internal-link) {
   font-family: var(--font-family-editor);
   font-size: var(--font-size-normal);
   padding-top: 5px;
-  padding-left: 1% !important;
-  padding-right: 1% !important;
 }
 
 /* normal text outside of headings and code of preview */
@@ -382,7 +402,7 @@ img:hover {
 
 /* code blocks in preview */
 pre code {
-  font-family: monaco !important;
+
   font-size: var(--font-size-code) !important;
   padding: 6px !important;
   line-height: normal;
@@ -515,7 +535,6 @@ code{
 
  /* Editor CodeBlock TEXT Appearance */
 .cm-s-obsidian pre.HyperMD-codeblock {
-  font-family: monaco !important;
   font-size: var(--font-size-code) !important;
   padding: 1px !important;
   display: block;
@@ -830,6 +849,11 @@ color: var(--text-accent) !important;
   border-bottom: 3px solid rgb(110, 136, 206) !important;
 }
 
+.workspace-tab-header {
+  color: #00A98A;
+  text-align: center;
+  stroke-width: 2px;
+}
 .workspace-leaf.mod-active .view-header-title-container:after {
   background: linear-gradient(to bottom, transparent, var(--background-secondary-alt)) !important;
 }
@@ -841,7 +865,7 @@ color: var(--text-accent) !important;
 }
 
 .view-header-title, .view-header-icon, .view-action{
-  color: var(--text-faint);
+  color: var(--text-accent);
 }
 
 /**************************************/
